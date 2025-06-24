@@ -74,6 +74,18 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CustomerControl.Designer.vb">
+      <DependentUpon>CustomerControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomerForm.Designer.vb">
+      <DependentUpon>CustomerForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="DashboardForm.Designer.vb">
       <DependentUpon>DashboardForm.vb</DependentUpon>
     </Compile>
@@ -85,6 +97,12 @@
     </Compile>
     <Compile Include="LoginForm.vb">
       <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VendorControl.Designer.vb">
+      <DependentUpon>VendorControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="VendorControl.vb">
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="VendorForm.vb">
       <SubType>Form</SubType>
@@ -111,6 +129,12 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="CustomerControl.resx">
+      <DependentUpon>CustomerControl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomerForm.resx">
+      <DependentUpon>CustomerForm.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DashboardForm.resx">
       <DependentUpon>DashboardForm.vb</DependentUpon>
     </EmbeddedResource>
@@ -122,6 +146,9 @@
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VendorControl.resx">
+      <DependentUpon>VendorControl.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VendorForm.resx">
       <DependentUpon>VendorForm.vb</DependentUpon>

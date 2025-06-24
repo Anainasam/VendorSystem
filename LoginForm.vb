@@ -16,8 +16,9 @@ Public Class LoginForm
 
                     If result > 0 Then
                         MsgBox("Login successful!")
-                        Me.Hide()
+
                         DashboardForm.Show()
+                        Hide()
 
                     Else
                         MsgBox("Invalid credentials.")

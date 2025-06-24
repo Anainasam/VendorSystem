@@ -22,24 +22,57 @@ Partial Class DashboardForm
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.contentPanel = New System.Windows.Forms.Panel()
+        Me.panelButtons = New System.Windows.Forms.Panel()
         Me.btnVendor = New System.Windows.Forms.Button()
+        Me.btnExit = New System.Windows.Forms.Button()
         Me.btnCustomer = New System.Windows.Forms.Button()
         Me.btnBackup = New System.Windows.Forms.Button()
-        Me.btnExit = New System.Windows.Forms.Button()
+        Me.panelButtons.SuspendLayout()
         Me.SuspendLayout()
+        '
+        'contentPanel
+        '
+        Me.contentPanel.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.contentPanel.Location = New System.Drawing.Point(0, 0)
+        Me.contentPanel.Name = "contentPanel"
+        Me.contentPanel.Size = New System.Drawing.Size(800, 450)
+        Me.contentPanel.TabIndex = 4
+        '
+        'panelButtons
+        '
+        Me.panelButtons.Controls.Add(Me.btnVendor)
+        Me.panelButtons.Controls.Add(Me.btnExit)
+        Me.panelButtons.Controls.Add(Me.btnCustomer)
+        Me.panelButtons.Controls.Add(Me.btnBackup)
+        Me.panelButtons.Dock = System.Windows.Forms.DockStyle.Top
+        Me.panelButtons.Location = New System.Drawing.Point(0, 0)
+        Me.panelButtons.Name = "panelButtons"
+        Me.panelButtons.Size = New System.Drawing.Size(800, 87)
+        Me.panelButtons.TabIndex = 5
         '
         'btnVendor
         '
-        Me.btnVendor.Location = New System.Drawing.Point(24, 90)
+        Me.btnVendor.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.btnVendor.Location = New System.Drawing.Point(12, 12)
         Me.btnVendor.Name = "btnVendor"
         Me.btnVendor.Size = New System.Drawing.Size(88, 70)
         Me.btnVendor.TabIndex = 0
         Me.btnVendor.Text = "Vendor"
-        Me.btnVendor.UseVisualStyleBackColor = True
+        Me.btnVendor.UseVisualStyleBackColor = False
+        '
+        'btnExit
+        '
+        Me.btnExit.Location = New System.Drawing.Point(332, 12)
+        Me.btnExit.Name = "btnExit"
+        Me.btnExit.Size = New System.Drawing.Size(80, 70)
+        Me.btnExit.TabIndex = 3
+        Me.btnExit.Text = "Exit"
+        Me.btnExit.UseVisualStyleBackColor = True
         '
         'btnCustomer
         '
-        Me.btnCustomer.Location = New System.Drawing.Point(137, 90)
+        Me.btnCustomer.Location = New System.Drawing.Point(118, 12)
         Me.btnCustomer.Name = "btnCustomer"
         Me.btnCustomer.Size = New System.Drawing.Size(88, 70)
         Me.btnCustomer.TabIndex = 1
@@ -48,39 +81,30 @@ Partial Class DashboardForm
         '
         'btnBackup
         '
-        Me.btnBackup.Location = New System.Drawing.Point(247, 90)
+        Me.btnBackup.Location = New System.Drawing.Point(224, 12)
         Me.btnBackup.Name = "btnBackup"
         Me.btnBackup.Size = New System.Drawing.Size(86, 70)
         Me.btnBackup.TabIndex = 2
         Me.btnBackup.Text = "Backup DB"
         Me.btnBackup.UseVisualStyleBackColor = True
         '
-        'btnExit
-        '
-        Me.btnExit.Location = New System.Drawing.Point(359, 90)
-        Me.btnExit.Name = "btnExit"
-        Me.btnExit.Size = New System.Drawing.Size(80, 70)
-        Me.btnExit.TabIndex = 3
-        Me.btnExit.Text = "Exit"
-        Me.btnExit.UseVisualStyleBackColor = True
-        '
         'DashboardForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
-        Me.Controls.Add(Me.btnExit)
-        Me.Controls.Add(Me.btnBackup)
-        Me.Controls.Add(Me.btnCustomer)
-        Me.Controls.Add(Me.btnVendor)
+        Me.Controls.Add(Me.panelButtons)
+        Me.Controls.Add(Me.contentPanel)
         Me.Name = "DashboardForm"
         Me.Text = "DashboardForm"
+        Me.panelButtons.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
-
+    Friend WithEvents contentPanel As Panel
+    Friend WithEvents panelButtons As Panel
     Friend WithEvents btnVendor As Button
+    Friend WithEvents btnExit As Button
     Friend WithEvents btnCustomer As Button
     Friend WithEvents btnBackup As Button
-    Friend WithEvents btnExit As Button
 End Class
