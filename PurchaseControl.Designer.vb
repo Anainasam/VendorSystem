@@ -83,7 +83,7 @@ Partial Class PurchaseControl
         Me.GridView1.Name = "GridView1"
         Me.GridView1.RowHeadersWidth = 51
         Me.GridView1.RowTemplate.Height = 24
-        Me.GridView1.Size = New System.Drawing.Size(1280, 250)
+        Me.GridView1.Size = New System.Drawing.Size(906, 228)
         Me.GridView1.TabIndex = 5
         '
         'btnNew

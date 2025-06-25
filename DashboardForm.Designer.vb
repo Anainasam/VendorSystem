@@ -24,6 +24,7 @@ Partial Class DashboardForm
     Private Sub InitializeComponent()
         Me.contentPanel = New System.Windows.Forms.Panel()
         Me.panelButtons = New System.Windows.Forms.Panel()
+        Me.btnLogout = New System.Windows.Forms.Button()
         Me.btnPurchaseReport = New System.Windows.Forms.Button()
         Me.btnPurchase = New System.Windows.Forms.Button()
         Me.btnVendor = New System.Windows.Forms.Button()
@@ -43,6 +44,7 @@ Partial Class DashboardForm
         '
         'panelButtons
         '
+        Me.panelButtons.Controls.Add(Me.btnLogout)
         Me.panelButtons.Controls.Add(Me.btnPurchaseReport)
         Me.panelButtons.Controls.Add(Me.btnPurchase)
         Me.panelButtons.Controls.Add(Me.btnVendor)
@@ -55,11 +57,20 @@ Partial Class DashboardForm
         Me.panelButtons.Size = New System.Drawing.Size(800, 87)
         Me.panelButtons.TabIndex = 5
         '
+        'btnLogout
+        '
+        Me.btnLogout.Location = New System.Drawing.Point(644, 12)
+        Me.btnLogout.Name = "btnLogout"
+        Me.btnLogout.Size = New System.Drawing.Size(80, 70)
+        Me.btnLogout.TabIndex = 8
+        Me.btnLogout.Text = "Logout"
+        Me.btnLogout.UseVisualStyleBackColor = True
+        '
         'btnPurchaseReport
         '
         Me.btnPurchaseReport.Location = New System.Drawing.Point(333, 12)
         Me.btnPurchaseReport.Name = "btnPurchaseReport"
-        Me.btnPurchaseReport.Size = New System.Drawing.Size(79, 70)
+        Me.btnPurchaseReport.Size = New System.Drawing.Size(83, 70)
         Me.btnPurchaseReport.TabIndex = 7
         Me.btnPurchaseReport.Text = "Purchase Report"
         Me.btnPurchaseReport.UseVisualStyleBackColor = True
@@ -85,7 +96,7 @@ Partial Class DashboardForm
         '
         'btnExit
         '
-        Me.btnExit.Location = New System.Drawing.Point(551, 12)
+        Me.btnExit.Location = New System.Drawing.Point(544, 12)
         Me.btnExit.Name = "btnExit"
         Me.btnExit.Size = New System.Drawing.Size(80, 70)
         Me.btnExit.TabIndex = 3
@@ -131,4 +142,5 @@ Partial Class DashboardForm
     Friend WithEvents btnBackup As Button
     Friend WithEvents btnPurchase As Button
     Friend WithEvents btnPurchaseReport As Button
+    Friend WithEvents btnLogout As Button
 End Class

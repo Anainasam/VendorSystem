@@ -8,6 +8,11 @@ Public Class VendorControl
     Private Sub VendorControl_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         GetID()
         GridView1.DataSource = GetData()
+        ' 🔧 Initialize search ComboBox
+        cmbSearchBy.Items.Clear()
+        cmbSearchBy.Items.AddRange(New String() {"VendorName", "Email", "PhoneNumber"})
+        cmbSearchBy.SelectedIndex = 0
+
     End Sub
 
     Private Function GetData() As DataTable
@@ -126,4 +131,43 @@ Public Class VendorControl
         txtEmail.Clear()
         txtPhone.Clear()
     End Sub
+
+    Private Sub SearchVendors()
+        Try
+            Dim searchField As String = cmbSearchBy.SelectedItem?.ToString()
+            Dim searchValue As String = txtSearch.Text.Trim()
+
+            If String.IsNullOrEmpty(searchField) OrElse String.IsNullOrEmpty(searchValue) Then
+                MsgBox("Please select a field and enter a search value.")
+                Exit Sub
+            End If
+
+            Dim dt As New DataTable()
+            cnn.Open()
+            Dim query As String = $"SELECT * FROM Setup.Vendor WHERE {searchField} LIKE @value"
+            Dim cmd As New SqlCommand(query, cnn)
+            cmd.Parameters.AddWithValue("@value", "%" & searchValue & "%")
+
+            Dim reader As SqlDataReader = cmd.ExecuteReader()
+            dt.Load(reader)
+            cnn.Close()
+
+            GridView1.DataSource = dt
+        Catch ex As Exception
+            MsgBox("Search failed: " & ex.Message)
+            cnn.Close()
+        End Try
+    End Sub
+    ' 🔍 Search Button Click
+    Private Sub btnSearch_Click(sender As Object, e As EventArgs) Handles btnSearch.Click
+        SearchVendors()
+    End Sub
+
+    ' ❌ Clear Search Button Click
+    Private Sub btnClearSearch_Click(sender As Object, e As EventArgs) Handles btnClearSearch.Click
+        txtSearch.Clear()
+        If cmbSearchBy.Items.Count > 0 Then cmbSearchBy.SelectedIndex = 0
+        GridView1.DataSource = GetData() ' Reload full data
+    End Sub
+
 End Class

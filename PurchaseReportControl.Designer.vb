@@ -30,7 +30,7 @@ Partial Class PurchaseReportControl
         'purchaseGrid
         '
         Me.purchaseGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.purchaseGrid.Location = New System.Drawing.Point(3, 82)
+        Me.purchaseGrid.Location = New System.Drawing.Point(21, 125)
         Me.purchaseGrid.Name = "purchaseGrid"
         Me.purchaseGrid.RowHeadersWidth = 51
         Me.purchaseGrid.RowTemplate.Height = 24
@@ -39,7 +39,7 @@ Partial Class PurchaseReportControl
         '
         'btnExportExcel
         '
-        Me.btnExportExcel.Location = New System.Drawing.Point(661, 450)
+        Me.btnExportExcel.Location = New System.Drawing.Point(661, 473)
         Me.btnExportExcel.Name = "btnExportExcel"
         Me.btnExportExcel.Size = New System.Drawing.Size(128, 54)
         Me.btnExportExcel.TabIndex = 1
@@ -53,7 +53,7 @@ Partial Class PurchaseReportControl
         Me.Controls.Add(Me.btnExportExcel)
         Me.Controls.Add(Me.purchaseGrid)
         Me.Name = "PurchaseReportControl"
-        Me.Size = New System.Drawing.Size(792, 527)
+        Me.Size = New System.Drawing.Size(856, 540)
         CType(Me.purchaseGrid, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 

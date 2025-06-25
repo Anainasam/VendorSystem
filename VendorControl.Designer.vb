@@ -37,17 +37,22 @@ Partial Class VendorControl
         Me.btnDelete = New System.Windows.Forms.Button()
         Me.btnNew = New System.Windows.Forms.Button()
         Me.txtPhone = New System.Windows.Forms.TextBox()
+        Me.txtSearch = New System.Windows.Forms.MaskedTextBox()
+        Me.cmbSearchBy = New System.Windows.Forms.ComboBox()
+        Me.btnClearSearch = New System.Windows.Forms.Button()
+        Me.btnSearch = New System.Windows.Forms.Button()
+        Me.Label6 = New System.Windows.Forms.Label()
         CType(Me.GridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'GridView1
         '
         Me.GridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.GridView1.Location = New System.Drawing.Point(0, 358)
+        Me.GridView1.Location = New System.Drawing.Point(8, 408)
         Me.GridView1.Name = "GridView1"
         Me.GridView1.RowHeadersWidth = 51
         Me.GridView1.RowTemplate.Height = 24
-        Me.GridView1.Size = New System.Drawing.Size(910, 224)
+        Me.GridView1.Size = New System.Drawing.Size(878, 218)
         Me.GridView1.TabIndex = 18
         '
         'txtId
@@ -84,18 +89,18 @@ Partial Class VendorControl
         Me.Label1.AutoSize = True
         Me.Label1.Location = New System.Drawing.Point(5, 122)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(18, 16)
+        Me.Label1.Size = New System.Drawing.Size(62, 16)
         Me.Label1.TabIndex = 24
-        Me.Label1.Text = "Id"
+        Me.Label1.Text = "VendorId"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
         Me.Label2.Location = New System.Drawing.Point(3, 155)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(44, 16)
+        Me.Label2.Size = New System.Drawing.Size(88, 16)
         Me.Label2.TabIndex = 25
-        Me.Label2.Text = "Name"
+        Me.Label2.Text = "VendorName"
         '
         'Label3
         '
@@ -126,7 +131,7 @@ Partial Class VendorControl
         '
         'btnSave
         '
-        Me.btnSave.Location = New System.Drawing.Point(3, 312)
+        Me.btnSave.Location = New System.Drawing.Point(101, 312)
         Me.btnSave.Name = "btnSave"
         Me.btnSave.Size = New System.Drawing.Size(75, 23)
         Me.btnSave.TabIndex = 29
@@ -135,7 +140,7 @@ Partial Class VendorControl
         '
         'btnUpdate
         '
-        Me.btnUpdate.Location = New System.Drawing.Point(101, 312)
+        Me.btnUpdate.Location = New System.Drawing.Point(199, 312)
         Me.btnUpdate.Name = "btnUpdate"
         Me.btnUpdate.Size = New System.Drawing.Size(75, 23)
         Me.btnUpdate.TabIndex = 30
@@ -144,7 +149,7 @@ Partial Class VendorControl
         '
         'btnDelete
         '
-        Me.btnDelete.Location = New System.Drawing.Point(209, 312)
+        Me.btnDelete.Location = New System.Drawing.Point(295, 312)
         Me.btnDelete.Name = "btnDelete"
         Me.btnDelete.Size = New System.Drawing.Size(75, 23)
         Me.btnDelete.TabIndex = 31
@@ -153,7 +158,7 @@ Partial Class VendorControl
         '
         'btnNew
         '
-        Me.btnNew.Location = New System.Drawing.Point(309, 312)
+        Me.btnNew.Location = New System.Drawing.Point(4, 312)
         Me.btnNew.Name = "btnNew"
         Me.btnNew.Size = New System.Drawing.Size(75, 23)
         Me.btnNew.TabIndex = 32
@@ -167,10 +172,60 @@ Partial Class VendorControl
         Me.txtPhone.Size = New System.Drawing.Size(164, 22)
         Me.txtPhone.TabIndex = 23
         '
+        'txtSearch
+        '
+        Me.txtSearch.AccessibleName = ""
+        Me.txtSearch.Location = New System.Drawing.Point(85, 371)
+        Me.txtSearch.Name = "txtSearch"
+        Me.txtSearch.Size = New System.Drawing.Size(124, 22)
+        Me.txtSearch.TabIndex = 33
+        '
+        'cmbSearchBy
+        '
+        Me.cmbSearchBy.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cmbSearchBy.FormattingEnabled = True
+        Me.cmbSearchBy.Items.AddRange(New Object() {"VendorName", "Email", "PhoneNumber"})
+        Me.cmbSearchBy.Location = New System.Drawing.Point(249, 371)
+        Me.cmbSearchBy.Name = "cmbSearchBy"
+        Me.cmbSearchBy.Size = New System.Drawing.Size(121, 24)
+        Me.cmbSearchBy.TabIndex = 34
+        '
+        'btnClearSearch
+        '
+        Me.btnClearSearch.Location = New System.Drawing.Point(517, 372)
+        Me.btnClearSearch.Name = "btnClearSearch"
+        Me.btnClearSearch.Size = New System.Drawing.Size(75, 23)
+        Me.btnClearSearch.TabIndex = 35
+        Me.btnClearSearch.Text = "Clear"
+        Me.btnClearSearch.UseVisualStyleBackColor = True
+        '
+        'btnSearch
+        '
+        Me.btnSearch.Location = New System.Drawing.Point(408, 371)
+        Me.btnSearch.Name = "btnSearch"
+        Me.btnSearch.Size = New System.Drawing.Size(75, 23)
+        Me.btnSearch.TabIndex = 36
+        Me.btnSearch.Text = "Search"
+        Me.btnSearch.UseVisualStyleBackColor = True
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Location = New System.Drawing.Point(3, 371)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(76, 16)
+        Me.Label6.TabIndex = 37
+        Me.Label6.Text = "Search For:"
+        '
         'VendorControl
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.Controls.Add(Me.Label6)
+        Me.Controls.Add(Me.btnSearch)
+        Me.Controls.Add(Me.btnClearSearch)
+        Me.Controls.Add(Me.cmbSearchBy)
+        Me.Controls.Add(Me.txtSearch)
         Me.Controls.Add(Me.btnNew)
         Me.Controls.Add(Me.btnDelete)
         Me.Controls.Add(Me.btnUpdate)
@@ -187,7 +242,7 @@ Partial Class VendorControl
         Me.Controls.Add(Me.txtId)
         Me.Controls.Add(Me.GridView1)
         Me.Name = "VendorControl"
-        Me.Size = New System.Drawing.Size(916, 582)
+        Me.Size = New System.Drawing.Size(1009, 659)
         CType(Me.GridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -209,4 +264,9 @@ Partial Class VendorControl
     Friend WithEvents btnDelete As Button
     Friend WithEvents btnNew As Button
     Friend WithEvents txtPhone As TextBox
+    Friend WithEvents txtSearch As MaskedTextBox
+    Friend WithEvents cmbSearchBy As ComboBox
+    Friend WithEvents btnClearSearch As Button
+    Friend WithEvents btnSearch As Button
+    Friend WithEvents Label6 As Label
 End Class

@@ -145,5 +145,7 @@ Public Class PurchaseControl
             dtpDate.Value = Convert.ToDateTime(row.Cells("PurchaseDate").Value)
         End If
     End Sub
+
+
 End Class
 

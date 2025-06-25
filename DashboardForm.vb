@@ -74,4 +74,16 @@ Public Class DashboardForm
         End Try
     End Sub
 
+    ' 🚪 Logout Button Click
+    Private Sub btnLogout_Click(sender As Object, e As EventArgs) Handles btnLogout.Click
+        ' Hide the dashboard
+        Me.Hide()
+
+        ' Show the login form again
+        Dim loginForm As New LoginForm()
+        loginForm.Show()
+        Me.Close()
+
+    End Sub
+
 End Class
