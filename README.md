@@ -1,22 +1,20 @@
-Inventory Management System (.NET VB.NET + SQL Server)
-A desktop-based inventory and account management system built using VB.NET (WinForms) and SQL Server.
+💼 Inventory Management System
 
-Key Features:
-Login authentication
+A desktop-based inventory and account management software built using **VB.NET (Windows Forms)** and **SQL Server**.
 
-Vendor, Customer, and Purchase management
+✅ Features
 
-Purchase reports with Excel export
+- 🔐 Login Authentication (Admin)
+- 🧾 Vendor, Customer & Purchase Management
+- 📊 Purchase Report with Export to Excel
+- 🔍 Search and Filter Functionality
+- 💾 Database Backup Feature
+- 🧩 Modular Dashboard Interface with Embedded Forms
 
-Search & filter functionality
+🛠 Technologies Used
 
-Database backup support
+- VB.NET (.NET Framework 4.8)
+- Windows Forms
+- SQL Server (SSMS)
 
-All modules embedded in a single dashboard interface
 
-Tech Stack:
-VB.NET (.NET Framework 4.8)
-
-Windows Forms
-
-SQL Server (SSMS)
