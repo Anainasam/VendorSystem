@@ -24,12 +24,12 @@ Partial Class DashboardForm
     Private Sub InitializeComponent()
         Me.contentPanel = New System.Windows.Forms.Panel()
         Me.panelButtons = New System.Windows.Forms.Panel()
+        Me.btnPurchaseReport = New System.Windows.Forms.Button()
         Me.btnPurchase = New System.Windows.Forms.Button()
         Me.btnVendor = New System.Windows.Forms.Button()
         Me.btnExit = New System.Windows.Forms.Button()
         Me.btnCustomer = New System.Windows.Forms.Button()
         Me.btnBackup = New System.Windows.Forms.Button()
-        Me.btnPurchaseReport = New System.Windows.Forms.Button()
         Me.panelButtons.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -54,6 +54,15 @@ Partial Class DashboardForm
         Me.panelButtons.Name = "panelButtons"
         Me.panelButtons.Size = New System.Drawing.Size(800, 87)
         Me.panelButtons.TabIndex = 5
+        '
+        'btnPurchaseReport
+        '
+        Me.btnPurchaseReport.Location = New System.Drawing.Point(333, 12)
+        Me.btnPurchaseReport.Name = "btnPurchaseReport"
+        Me.btnPurchaseReport.Size = New System.Drawing.Size(79, 70)
+        Me.btnPurchaseReport.TabIndex = 7
+        Me.btnPurchaseReport.Text = "Purchase Report"
+        Me.btnPurchaseReport.UseVisualStyleBackColor = True
         '
         'btnPurchase
         '
@@ -100,15 +109,6 @@ Partial Class DashboardForm
         Me.btnBackup.TabIndex = 2
         Me.btnBackup.Text = "Backup DB"
         Me.btnBackup.UseVisualStyleBackColor = True
-        '
-        'btnPurchaseReport
-        '
-        Me.btnPurchaseReport.Location = New System.Drawing.Point(333, 12)
-        Me.btnPurchaseReport.Name = "btnPurchaseReport"
-        Me.btnPurchaseReport.Size = New System.Drawing.Size(79, 70)
-        Me.btnPurchaseReport.TabIndex = 7
-        Me.btnPurchaseReport.Text = "Purchase Report"
-        Me.btnPurchaseReport.UseVisualStyleBackColor = True
         '
         'DashboardForm
         '
