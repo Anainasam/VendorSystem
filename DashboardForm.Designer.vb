@@ -24,10 +24,12 @@ Partial Class DashboardForm
     Private Sub InitializeComponent()
         Me.contentPanel = New System.Windows.Forms.Panel()
         Me.panelButtons = New System.Windows.Forms.Panel()
+        Me.btnPurchase = New System.Windows.Forms.Button()
         Me.btnVendor = New System.Windows.Forms.Button()
         Me.btnExit = New System.Windows.Forms.Button()
         Me.btnCustomer = New System.Windows.Forms.Button()
         Me.btnBackup = New System.Windows.Forms.Button()
+        Me.btnPurchaseReport = New System.Windows.Forms.Button()
         Me.panelButtons.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -41,6 +43,8 @@ Partial Class DashboardForm
         '
         'panelButtons
         '
+        Me.panelButtons.Controls.Add(Me.btnPurchaseReport)
+        Me.panelButtons.Controls.Add(Me.btnPurchase)
         Me.panelButtons.Controls.Add(Me.btnVendor)
         Me.panelButtons.Controls.Add(Me.btnExit)
         Me.panelButtons.Controls.Add(Me.btnCustomer)
@@ -51,9 +55,18 @@ Partial Class DashboardForm
         Me.panelButtons.Size = New System.Drawing.Size(800, 87)
         Me.panelButtons.TabIndex = 5
         '
+        'btnPurchase
+        '
+        Me.btnPurchase.Location = New System.Drawing.Point(229, 12)
+        Me.btnPurchase.Name = "btnPurchase"
+        Me.btnPurchase.Size = New System.Drawing.Size(80, 70)
+        Me.btnPurchase.TabIndex = 6
+        Me.btnPurchase.Text = "Purchase"
+        Me.btnPurchase.UseVisualStyleBackColor = True
+        '
         'btnVendor
         '
-        Me.btnVendor.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.btnVendor.BackColor = System.Drawing.Color.White
         Me.btnVendor.Location = New System.Drawing.Point(12, 12)
         Me.btnVendor.Name = "btnVendor"
         Me.btnVendor.Size = New System.Drawing.Size(88, 70)
@@ -63,7 +76,7 @@ Partial Class DashboardForm
         '
         'btnExit
         '
-        Me.btnExit.Location = New System.Drawing.Point(332, 12)
+        Me.btnExit.Location = New System.Drawing.Point(551, 12)
         Me.btnExit.Name = "btnExit"
         Me.btnExit.Size = New System.Drawing.Size(80, 70)
         Me.btnExit.TabIndex = 3
@@ -81,12 +94,21 @@ Partial Class DashboardForm
         '
         'btnBackup
         '
-        Me.btnBackup.Location = New System.Drawing.Point(224, 12)
+        Me.btnBackup.Location = New System.Drawing.Point(436, 12)
         Me.btnBackup.Name = "btnBackup"
         Me.btnBackup.Size = New System.Drawing.Size(86, 70)
         Me.btnBackup.TabIndex = 2
         Me.btnBackup.Text = "Backup DB"
         Me.btnBackup.UseVisualStyleBackColor = True
+        '
+        'btnPurchaseReport
+        '
+        Me.btnPurchaseReport.Location = New System.Drawing.Point(333, 12)
+        Me.btnPurchaseReport.Name = "btnPurchaseReport"
+        Me.btnPurchaseReport.Size = New System.Drawing.Size(79, 70)
+        Me.btnPurchaseReport.TabIndex = 7
+        Me.btnPurchaseReport.Text = "Purchase Report"
+        Me.btnPurchaseReport.UseVisualStyleBackColor = True
         '
         'DashboardForm
         '
@@ -107,4 +129,6 @@ Partial Class DashboardForm
     Friend WithEvents btnExit As Button
     Friend WithEvents btnCustomer As Button
     Friend WithEvents btnBackup As Button
+    Friend WithEvents btnPurchase As Button
+    Friend WithEvents btnPurchaseReport As Button
 End Class
