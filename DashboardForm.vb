@@ -45,6 +45,10 @@ Public Class DashboardForm
         LoadControl(New PurchaseReportControl())
     End Sub
 
+    Private Sub btnStockTransfer_Click(sender As Object, e As EventArgs) Handles btnStockTransfer.Click
+        LoadControl(New StockTransferControl())
+    End Sub
+
     Private Sub BackupDatabase()
         Try
             Dim connectionString As String = ConfigurationManager.ConnectionStrings("VendorDB").ConnectionString

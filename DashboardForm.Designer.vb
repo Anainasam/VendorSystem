@@ -31,6 +31,7 @@ Partial Class DashboardForm
         Me.btnExit = New System.Windows.Forms.Button()
         Me.btnCustomer = New System.Windows.Forms.Button()
         Me.btnBackup = New System.Windows.Forms.Button()
+        Me.btnStockTransfer = New System.Windows.Forms.Button()
         Me.panelButtons.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -44,6 +45,7 @@ Partial Class DashboardForm
         '
         'panelButtons
         '
+        Me.panelButtons.Controls.Add(Me.btnStockTransfer)
         Me.panelButtons.Controls.Add(Me.btnLogout)
         Me.panelButtons.Controls.Add(Me.btnPurchaseReport)
         Me.panelButtons.Controls.Add(Me.btnPurchase)
@@ -59,7 +61,7 @@ Partial Class DashboardForm
         '
         'btnLogout
         '
-        Me.btnLogout.Location = New System.Drawing.Point(644, 12)
+        Me.btnLogout.Location = New System.Drawing.Point(708, 17)
         Me.btnLogout.Name = "btnLogout"
         Me.btnLogout.Size = New System.Drawing.Size(80, 70)
         Me.btnLogout.TabIndex = 8
@@ -68,7 +70,7 @@ Partial Class DashboardForm
         '
         'btnPurchaseReport
         '
-        Me.btnPurchaseReport.Location = New System.Drawing.Point(333, 12)
+        Me.btnPurchaseReport.Location = New System.Drawing.Point(286, 12)
         Me.btnPurchaseReport.Name = "btnPurchaseReport"
         Me.btnPurchaseReport.Size = New System.Drawing.Size(83, 70)
         Me.btnPurchaseReport.TabIndex = 7
@@ -77,7 +79,7 @@ Partial Class DashboardForm
         '
         'btnPurchase
         '
-        Me.btnPurchase.Location = New System.Drawing.Point(229, 12)
+        Me.btnPurchase.Location = New System.Drawing.Point(200, 12)
         Me.btnPurchase.Name = "btnPurchase"
         Me.btnPurchase.Size = New System.Drawing.Size(80, 70)
         Me.btnPurchase.TabIndex = 6
@@ -96,7 +98,7 @@ Partial Class DashboardForm
         '
         'btnExit
         '
-        Me.btnExit.Location = New System.Drawing.Point(544, 12)
+        Me.btnExit.Location = New System.Drawing.Point(622, 17)
         Me.btnExit.Name = "btnExit"
         Me.btnExit.Size = New System.Drawing.Size(80, 70)
         Me.btnExit.TabIndex = 3
@@ -105,7 +107,7 @@ Partial Class DashboardForm
         '
         'btnCustomer
         '
-        Me.btnCustomer.Location = New System.Drawing.Point(118, 12)
+        Me.btnCustomer.Location = New System.Drawing.Point(106, 12)
         Me.btnCustomer.Name = "btnCustomer"
         Me.btnCustomer.Size = New System.Drawing.Size(88, 70)
         Me.btnCustomer.TabIndex = 1
@@ -114,12 +116,21 @@ Partial Class DashboardForm
         '
         'btnBackup
         '
-        Me.btnBackup.Location = New System.Drawing.Point(436, 12)
+        Me.btnBackup.Location = New System.Drawing.Point(375, 12)
         Me.btnBackup.Name = "btnBackup"
         Me.btnBackup.Size = New System.Drawing.Size(86, 70)
         Me.btnBackup.TabIndex = 2
         Me.btnBackup.Text = "Backup DB"
         Me.btnBackup.UseVisualStyleBackColor = True
+        '
+        'btnStockTransfer
+        '
+        Me.btnStockTransfer.Location = New System.Drawing.Point(467, 12)
+        Me.btnStockTransfer.Name = "btnStockTransfer"
+        Me.btnStockTransfer.Size = New System.Drawing.Size(86, 70)
+        Me.btnStockTransfer.TabIndex = 3
+        Me.btnStockTransfer.Text = "Stock Transfer"
+        Me.btnStockTransfer.UseVisualStyleBackColor = True
         '
         'DashboardForm
         '
@@ -143,4 +154,5 @@ Partial Class DashboardForm
     Friend WithEvents btnPurchase As Button
     Friend WithEvents btnPurchaseReport As Button
     Friend WithEvents btnLogout As Button
+    Friend WithEvents btnStockTransfer As Button
 End Class

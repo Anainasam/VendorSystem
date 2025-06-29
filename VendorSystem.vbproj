@@ -110,6 +110,12 @@
     <Compile Include="PurchaseReportControl.vb">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="StockTransferControl.Designer.vb">
+      <DependentUpon>StockTransferControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="StockTransferControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="VendorControl.Designer.vb">
       <DependentUpon>VendorControl.vb</DependentUpon>
     </Compile>
@@ -164,6 +170,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PurchaseReportControl.resx">
       <DependentUpon>PurchaseReportControl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StockTransferControl.resx">
+      <DependentUpon>StockTransferControl.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VendorControl.resx">
       <DependentUpon>VendorControl.vb</DependentUpon>
