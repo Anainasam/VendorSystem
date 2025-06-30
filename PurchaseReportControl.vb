@@ -69,4 +69,6 @@ Public Class PurchaseReportControl
             MsgBox("Export failed: " & ex.Message)
         End Try
     End Sub
+
+
 End Class

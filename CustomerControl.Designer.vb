@@ -171,10 +171,10 @@ Partial Class CustomerControl
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(62, 158)
+        Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.Location = New System.Drawing.Point(12, 171)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(197, 29)
+        Me.Label7.Size = New System.Drawing.Size(161, 25)
         Me.Label7.TabIndex = 40
         Me.Label7.Text = "Customer Details"
         '

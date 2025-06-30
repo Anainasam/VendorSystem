@@ -24,6 +24,7 @@ Partial Class DashboardForm
     Private Sub InitializeComponent()
         Me.contentPanel = New System.Windows.Forms.Panel()
         Me.panelButtons = New System.Windows.Forms.Panel()
+        Me.btnStockTransfer = New System.Windows.Forms.Button()
         Me.btnLogout = New System.Windows.Forms.Button()
         Me.btnPurchaseReport = New System.Windows.Forms.Button()
         Me.btnPurchase = New System.Windows.Forms.Button()
@@ -31,7 +32,7 @@ Partial Class DashboardForm
         Me.btnExit = New System.Windows.Forms.Button()
         Me.btnCustomer = New System.Windows.Forms.Button()
         Me.btnBackup = New System.Windows.Forms.Button()
-        Me.btnStockTransfer = New System.Windows.Forms.Button()
+        Me.btnUserManagement = New System.Windows.Forms.Button()
         Me.panelButtons.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -45,6 +46,7 @@ Partial Class DashboardForm
         '
         'panelButtons
         '
+        Me.panelButtons.Controls.Add(Me.btnUserManagement)
         Me.panelButtons.Controls.Add(Me.btnStockTransfer)
         Me.panelButtons.Controls.Add(Me.btnLogout)
         Me.panelButtons.Controls.Add(Me.btnPurchaseReport)
@@ -59,27 +61,36 @@ Partial Class DashboardForm
         Me.panelButtons.Size = New System.Drawing.Size(800, 87)
         Me.panelButtons.TabIndex = 5
         '
+        'btnStockTransfer
+        '
+        Me.btnStockTransfer.Location = New System.Drawing.Point(563, 17)
+        Me.btnStockTransfer.Name = "btnStockTransfer"
+        Me.btnStockTransfer.Size = New System.Drawing.Size(75, 70)
+        Me.btnStockTransfer.TabIndex = 3
+        Me.btnStockTransfer.Text = "Stock Transfer"
+        Me.btnStockTransfer.UseVisualStyleBackColor = True
+        '
         'btnLogout
         '
-        Me.btnLogout.Location = New System.Drawing.Point(708, 17)
+        Me.btnLogout.Location = New System.Drawing.Point(728, 17)
         Me.btnLogout.Name = "btnLogout"
-        Me.btnLogout.Size = New System.Drawing.Size(80, 70)
+        Me.btnLogout.Size = New System.Drawing.Size(69, 70)
         Me.btnLogout.TabIndex = 8
         Me.btnLogout.Text = "Logout"
         Me.btnLogout.UseVisualStyleBackColor = True
         '
         'btnPurchaseReport
         '
-        Me.btnPurchaseReport.Location = New System.Drawing.Point(286, 12)
+        Me.btnPurchaseReport.Location = New System.Drawing.Point(393, 17)
         Me.btnPurchaseReport.Name = "btnPurchaseReport"
-        Me.btnPurchaseReport.Size = New System.Drawing.Size(83, 70)
+        Me.btnPurchaseReport.Size = New System.Drawing.Size(82, 70)
         Me.btnPurchaseReport.TabIndex = 7
         Me.btnPurchaseReport.Text = "Purchase Report"
         Me.btnPurchaseReport.UseVisualStyleBackColor = True
         '
         'btnPurchase
         '
-        Me.btnPurchase.Location = New System.Drawing.Point(200, 12)
+        Me.btnPurchase.Location = New System.Drawing.Point(307, 17)
         Me.btnPurchase.Name = "btnPurchase"
         Me.btnPurchase.Size = New System.Drawing.Size(80, 70)
         Me.btnPurchase.TabIndex = 6
@@ -89,48 +100,49 @@ Partial Class DashboardForm
         'btnVendor
         '
         Me.btnVendor.BackColor = System.Drawing.Color.White
-        Me.btnVendor.Location = New System.Drawing.Point(12, 12)
+        Me.btnVendor.Location = New System.Drawing.Point(134, 17)
         Me.btnVendor.Name = "btnVendor"
-        Me.btnVendor.Size = New System.Drawing.Size(88, 70)
+        Me.btnVendor.Size = New System.Drawing.Size(79, 70)
         Me.btnVendor.TabIndex = 0
         Me.btnVendor.Text = "Vendor"
         Me.btnVendor.UseVisualStyleBackColor = False
         '
         'btnExit
         '
-        Me.btnExit.Location = New System.Drawing.Point(622, 17)
+        Me.btnExit.Location = New System.Drawing.Point(655, 17)
         Me.btnExit.Name = "btnExit"
-        Me.btnExit.Size = New System.Drawing.Size(80, 70)
+        Me.btnExit.Size = New System.Drawing.Size(67, 70)
         Me.btnExit.TabIndex = 3
         Me.btnExit.Text = "Exit"
         Me.btnExit.UseVisualStyleBackColor = True
         '
         'btnCustomer
         '
-        Me.btnCustomer.Location = New System.Drawing.Point(106, 12)
+        Me.btnCustomer.Location = New System.Drawing.Point(219, 17)
         Me.btnCustomer.Name = "btnCustomer"
-        Me.btnCustomer.Size = New System.Drawing.Size(88, 70)
+        Me.btnCustomer.Size = New System.Drawing.Size(82, 70)
         Me.btnCustomer.TabIndex = 1
         Me.btnCustomer.Text = "Customer"
         Me.btnCustomer.UseVisualStyleBackColor = True
         '
         'btnBackup
         '
-        Me.btnBackup.Location = New System.Drawing.Point(375, 12)
+        Me.btnBackup.Location = New System.Drawing.Point(481, 17)
         Me.btnBackup.Name = "btnBackup"
-        Me.btnBackup.Size = New System.Drawing.Size(86, 70)
+        Me.btnBackup.Size = New System.Drawing.Size(76, 70)
         Me.btnBackup.TabIndex = 2
         Me.btnBackup.Text = "Backup DB"
         Me.btnBackup.UseVisualStyleBackColor = True
         '
-        'btnStockTransfer
+        'btnUserManagement
         '
-        Me.btnStockTransfer.Location = New System.Drawing.Point(467, 12)
-        Me.btnStockTransfer.Name = "btnStockTransfer"
-        Me.btnStockTransfer.Size = New System.Drawing.Size(86, 70)
-        Me.btnStockTransfer.TabIndex = 3
-        Me.btnStockTransfer.Text = "Stock Transfer"
-        Me.btnStockTransfer.UseVisualStyleBackColor = True
+        Me.btnUserManagement.BackColor = System.Drawing.Color.White
+        Me.btnUserManagement.Location = New System.Drawing.Point(16, 17)
+        Me.btnUserManagement.Name = "btnUserManagement"
+        Me.btnUserManagement.Size = New System.Drawing.Size(96, 70)
+        Me.btnUserManagement.TabIndex = 1
+        Me.btnUserManagement.Text = "User Management"
+        Me.btnUserManagement.UseVisualStyleBackColor = False
         '
         'DashboardForm
         '
@@ -155,4 +167,5 @@ Partial Class DashboardForm
     Friend WithEvents btnPurchaseReport As Button
     Friend WithEvents btnLogout As Button
     Friend WithEvents btnStockTransfer As Button
+    Friend WithEvents btnUserManagement As Button
 End Class

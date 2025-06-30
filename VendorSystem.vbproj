@@ -117,6 +117,18 @@
     <Compile Include="StockTransferControl.vb">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="UserManagementControl.Designer.vb">
+      <DependentUpon>UserManagementControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UserManagementControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserManagementForm.Designer.vb">
+      <DependentUpon>UserManagementForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UserManagementForm.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="VendorControl.Designer.vb">
       <DependentUpon>VendorControl.vb</DependentUpon>
     </Compile>
@@ -174,6 +186,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="StockTransferControl.resx">
       <DependentUpon>StockTransferControl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserManagementControl.resx">
+      <DependentUpon>UserManagementControl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserManagementForm.resx">
+      <DependentUpon>UserManagementForm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VendorControl.resx">
       <DependentUpon>VendorControl.vb</DependentUpon>

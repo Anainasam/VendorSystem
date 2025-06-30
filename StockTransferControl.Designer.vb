@@ -32,13 +32,14 @@ Partial Class StockTransferControl
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
         CType(Me.gridTransfers, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'cmbItem
         '
         Me.cmbItem.FormattingEnabled = True
-        Me.cmbItem.Location = New System.Drawing.Point(193, 111)
+        Me.cmbItem.Location = New System.Drawing.Point(193, 224)
         Me.cmbItem.Name = "cmbItem"
         Me.cmbItem.Size = New System.Drawing.Size(121, 24)
         Me.cmbItem.TabIndex = 0
@@ -46,7 +47,7 @@ Partial Class StockTransferControl
         'cmbFromWarehouse
         '
         Me.cmbFromWarehouse.FormattingEnabled = True
-        Me.cmbFromWarehouse.Location = New System.Drawing.Point(193, 166)
+        Me.cmbFromWarehouse.Location = New System.Drawing.Point(193, 277)
         Me.cmbFromWarehouse.Name = "cmbFromWarehouse"
         Me.cmbFromWarehouse.Size = New System.Drawing.Size(121, 24)
         Me.cmbFromWarehouse.TabIndex = 1
@@ -54,21 +55,21 @@ Partial Class StockTransferControl
         'cmbToWarehouse
         '
         Me.cmbToWarehouse.FormattingEnabled = True
-        Me.cmbToWarehouse.Location = New System.Drawing.Point(193, 224)
+        Me.cmbToWarehouse.Location = New System.Drawing.Point(193, 325)
         Me.cmbToWarehouse.Name = "cmbToWarehouse"
         Me.cmbToWarehouse.Size = New System.Drawing.Size(121, 24)
         Me.cmbToWarehouse.TabIndex = 2
         '
         'txtTransferQty
         '
-        Me.txtTransferQty.Location = New System.Drawing.Point(193, 279)
+        Me.txtTransferQty.Location = New System.Drawing.Point(193, 377)
         Me.txtTransferQty.Name = "txtTransferQty"
         Me.txtTransferQty.Size = New System.Drawing.Size(121, 22)
         Me.txtTransferQty.TabIndex = 3
         '
         'btnTransfer
         '
-        Me.btnTransfer.Location = New System.Drawing.Point(193, 324)
+        Me.btnTransfer.Location = New System.Drawing.Point(193, 418)
         Me.btnTransfer.Name = "btnTransfer"
         Me.btnTransfer.Size = New System.Drawing.Size(75, 23)
         Me.btnTransfer.TabIndex = 4
@@ -78,7 +79,7 @@ Partial Class StockTransferControl
         'gridTransfers
         '
         Me.gridTransfers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.gridTransfers.Location = New System.Drawing.Point(50, 362)
+        Me.gridTransfers.Location = New System.Drawing.Point(37, 461)
         Me.gridTransfers.Name = "gridTransfers"
         Me.gridTransfers.RowHeadersWidth = 51
         Me.gridTransfers.RowTemplate.Height = 24
@@ -88,7 +89,7 @@ Partial Class StockTransferControl
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(47, 114)
+        Me.Label1.Location = New System.Drawing.Point(47, 232)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(72, 16)
         Me.Label1.TabIndex = 6
@@ -97,7 +98,7 @@ Partial Class StockTransferControl
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(47, 169)
+        Me.Label2.Location = New System.Drawing.Point(47, 280)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(111, 16)
         Me.Label2.TabIndex = 7
@@ -106,7 +107,7 @@ Partial Class StockTransferControl
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(47, 224)
+        Me.Label3.Location = New System.Drawing.Point(47, 328)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(97, 16)
         Me.Label3.TabIndex = 8
@@ -115,16 +116,27 @@ Partial Class StockTransferControl
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(47, 285)
+        Me.Label4.Location = New System.Drawing.Point(47, 377)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(122, 16)
         Me.Label4.TabIndex = 9
         Me.Label4.Text = "Quantity to Transfer"
         '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Location = New System.Drawing.Point(45, 175)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(204, 25)
+        Me.Label5.TabIndex = 10
+        Me.Label5.Text = "Stock Transfer Details"
+        '
         'StockTransferControl
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
@@ -136,7 +148,7 @@ Partial Class StockTransferControl
         Me.Controls.Add(Me.cmbFromWarehouse)
         Me.Controls.Add(Me.cmbItem)
         Me.Name = "StockTransferControl"
-        Me.Size = New System.Drawing.Size(1204, 692)
+        Me.Size = New System.Drawing.Size(1245, 791)
         CType(Me.gridTransfers, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -153,4 +165,5 @@ Partial Class StockTransferControl
     Friend WithEvents Label2 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents Label4 As Label
+    Friend WithEvents Label5 As Label
 End Class

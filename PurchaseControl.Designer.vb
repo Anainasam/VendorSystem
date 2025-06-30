@@ -48,35 +48,35 @@ Partial Class PurchaseControl
         'cmbVendor
         '
         Me.cmbVendor.FormattingEnabled = True
-        Me.cmbVendor.Location = New System.Drawing.Point(194, 191)
+        Me.cmbVendor.Location = New System.Drawing.Point(194, 284)
         Me.cmbVendor.Name = "cmbVendor"
         Me.cmbVendor.Size = New System.Drawing.Size(161, 24)
         Me.cmbVendor.TabIndex = 0
         '
         'txtItem
         '
-        Me.txtItem.Location = New System.Drawing.Point(194, 239)
+        Me.txtItem.Location = New System.Drawing.Point(194, 326)
         Me.txtItem.Name = "txtItem"
         Me.txtItem.Size = New System.Drawing.Size(100, 22)
         Me.txtItem.TabIndex = 1
         '
         'txtAmount
         '
-        Me.txtAmount.Location = New System.Drawing.Point(194, 289)
+        Me.txtAmount.Location = New System.Drawing.Point(194, 365)
         Me.txtAmount.Name = "txtAmount"
         Me.txtAmount.Size = New System.Drawing.Size(100, 22)
         Me.txtAmount.TabIndex = 2
         '
         'dtpDate
         '
-        Me.dtpDate.Location = New System.Drawing.Point(194, 385)
+        Me.dtpDate.Location = New System.Drawing.Point(194, 441)
         Me.dtpDate.Name = "dtpDate"
         Me.dtpDate.Size = New System.Drawing.Size(200, 22)
         Me.dtpDate.TabIndex = 3
         '
         'txtId
         '
-        Me.txtId.Location = New System.Drawing.Point(194, 145)
+        Me.txtId.Location = New System.Drawing.Point(194, 242)
         Me.txtId.Name = "txtId"
         Me.txtId.Size = New System.Drawing.Size(100, 22)
         Me.txtId.TabIndex = 4
@@ -84,7 +84,7 @@ Partial Class PurchaseControl
         'GridView1
         '
         Me.GridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.GridView1.Location = New System.Drawing.Point(3, 545)
+        Me.GridView1.Location = New System.Drawing.Point(3, 566)
         Me.GridView1.Name = "GridView1"
         Me.GridView1.RowHeadersWidth = 51
         Me.GridView1.RowTemplate.Height = 24
@@ -93,7 +93,7 @@ Partial Class PurchaseControl
         '
         'btnNew
         '
-        Me.btnNew.Location = New System.Drawing.Point(107, 495)
+        Me.btnNew.Location = New System.Drawing.Point(108, 524)
         Me.btnNew.Name = "btnNew"
         Me.btnNew.Size = New System.Drawing.Size(75, 23)
         Me.btnNew.TabIndex = 6
@@ -102,7 +102,7 @@ Partial Class PurchaseControl
         '
         'btnSave
         '
-        Me.btnSave.Location = New System.Drawing.Point(206, 495)
+        Me.btnSave.Location = New System.Drawing.Point(209, 524)
         Me.btnSave.Name = "btnSave"
         Me.btnSave.Size = New System.Drawing.Size(75, 23)
         Me.btnSave.TabIndex = 7
@@ -111,7 +111,7 @@ Partial Class PurchaseControl
         '
         'btnUpdate
         '
-        Me.btnUpdate.Location = New System.Drawing.Point(304, 495)
+        Me.btnUpdate.Location = New System.Drawing.Point(304, 524)
         Me.btnUpdate.Name = "btnUpdate"
         Me.btnUpdate.Size = New System.Drawing.Size(75, 23)
         Me.btnUpdate.TabIndex = 8
@@ -120,7 +120,7 @@ Partial Class PurchaseControl
         '
         'btnDelete
         '
-        Me.btnDelete.Location = New System.Drawing.Point(401, 495)
+        Me.btnDelete.Location = New System.Drawing.Point(400, 524)
         Me.btnDelete.Name = "btnDelete"
         Me.btnDelete.Size = New System.Drawing.Size(75, 23)
         Me.btnDelete.TabIndex = 9
@@ -130,7 +130,7 @@ Partial Class PurchaseControl
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(19, 151)
+        Me.Label1.Location = New System.Drawing.Point(22, 248)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(78, 16)
         Me.Label1.TabIndex = 10
@@ -139,7 +139,7 @@ Partial Class PurchaseControl
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(19, 199)
+        Me.Label2.Location = New System.Drawing.Point(25, 292)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(88, 16)
         Me.Label2.TabIndex = 11
@@ -148,7 +148,7 @@ Partial Class PurchaseControl
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(22, 245)
+        Me.Label3.Location = New System.Drawing.Point(25, 332)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(32, 16)
         Me.Label3.TabIndex = 12
@@ -157,7 +157,7 @@ Partial Class PurchaseControl
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(22, 292)
+        Me.Label4.Location = New System.Drawing.Point(25, 371)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(52, 16)
         Me.Label4.TabIndex = 13
@@ -166,7 +166,7 @@ Partial Class PurchaseControl
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(19, 385)
+        Me.Label5.Location = New System.Drawing.Point(25, 446)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(94, 16)
         Me.Label5.TabIndex = 14
@@ -174,7 +174,7 @@ Partial Class PurchaseControl
         '
         'txtQuantity
         '
-        Me.txtQuantity.Location = New System.Drawing.Point(194, 332)
+        Me.txtQuantity.Location = New System.Drawing.Point(194, 402)
         Me.txtQuantity.Name = "txtQuantity"
         Me.txtQuantity.Size = New System.Drawing.Size(100, 22)
         Me.txtQuantity.TabIndex = 15
@@ -182,7 +182,7 @@ Partial Class PurchaseControl
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(19, 332)
+        Me.Label6.Location = New System.Drawing.Point(22, 408)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(55, 16)
         Me.Label6.TabIndex = 16
@@ -191,7 +191,7 @@ Partial Class PurchaseControl
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(19, 447)
+        Me.Label7.Location = New System.Drawing.Point(19, 483)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(131, 16)
         Me.Label7.TabIndex = 17
@@ -200,7 +200,7 @@ Partial Class PurchaseControl
         'txtWarehouse
         '
         Me.txtWarehouse.FormattingEnabled = True
-        Me.txtWarehouse.Location = New System.Drawing.Point(194, 444)
+        Me.txtWarehouse.Location = New System.Drawing.Point(194, 480)
         Me.txtWarehouse.Name = "txtWarehouse"
         Me.txtWarehouse.Size = New System.Drawing.Size(121, 24)
         Me.txtWarehouse.TabIndex = 18
@@ -208,10 +208,10 @@ Partial Class PurchaseControl
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(90, 87)
+        Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.Location = New System.Drawing.Point(23, 188)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(194, 29)
+        Me.Label8.Size = New System.Drawing.Size(159, 25)
         Me.Label8.TabIndex = 39
         Me.Label8.Text = "Purchase Details"
         '
