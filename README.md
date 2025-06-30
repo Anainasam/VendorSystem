@@ -4,13 +4,13 @@ A desktop-based inventory and account management software built using **VB.NET (
 
 Features:
 
--  Login Authentication (Admin)
+-  Login Authentication (Admin,User)
 -  Vendor, Customer & Purchase Management
 -  Purchase Report with Export to Excel
 -  Search and Filter Functionality
 -  Database Backup Feature
 -  Modular Dashboard Interface with Embedded Forms
-
+-  Stock Transfer management 
 Technologies Used:
 
 - VB.NET (.NET Framework 4.8)
