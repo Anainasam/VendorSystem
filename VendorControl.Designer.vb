@@ -42,44 +42,45 @@ Partial Class VendorControl
         Me.btnClearSearch = New System.Windows.Forms.Button()
         Me.btnSearch = New System.Windows.Forms.Button()
         Me.Label6 = New System.Windows.Forms.Label()
+        Me.Label7 = New System.Windows.Forms.Label()
         CType(Me.GridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'GridView1
         '
         Me.GridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.GridView1.Location = New System.Drawing.Point(8, 408)
+        Me.GridView1.Location = New System.Drawing.Point(18, 495)
         Me.GridView1.Name = "GridView1"
         Me.GridView1.RowHeadersWidth = 51
         Me.GridView1.RowTemplate.Height = 24
-        Me.GridView1.Size = New System.Drawing.Size(878, 218)
+        Me.GridView1.Size = New System.Drawing.Size(748, 233)
         Me.GridView1.TabIndex = 18
         '
         'txtId
         '
         Me.txtId.AccessibleName = ""
-        Me.txtId.Location = New System.Drawing.Point(101, 116)
+        Me.txtId.Location = New System.Drawing.Point(101, 177)
         Me.txtId.Name = "txtId"
         Me.txtId.Size = New System.Drawing.Size(124, 22)
         Me.txtId.TabIndex = 19
         '
         'txtName
         '
-        Me.txtName.Location = New System.Drawing.Point(101, 155)
+        Me.txtName.Location = New System.Drawing.Point(101, 222)
         Me.txtName.Name = "txtName"
         Me.txtName.Size = New System.Drawing.Size(164, 22)
         Me.txtName.TabIndex = 20
         '
         'txtAddress
         '
-        Me.txtAddress.Location = New System.Drawing.Point(101, 195)
+        Me.txtAddress.Location = New System.Drawing.Point(101, 261)
         Me.txtAddress.Name = "txtAddress"
         Me.txtAddress.Size = New System.Drawing.Size(164, 22)
         Me.txtAddress.TabIndex = 21
         '
         'txtEmail
         '
-        Me.txtEmail.Location = New System.Drawing.Point(101, 232)
+        Me.txtEmail.Location = New System.Drawing.Point(101, 304)
         Me.txtEmail.Name = "txtEmail"
         Me.txtEmail.Size = New System.Drawing.Size(164, 22)
         Me.txtEmail.TabIndex = 22
@@ -87,7 +88,7 @@ Partial Class VendorControl
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(5, 122)
+        Me.Label1.Location = New System.Drawing.Point(9, 177)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(62, 16)
         Me.Label1.TabIndex = 24
@@ -96,7 +97,7 @@ Partial Class VendorControl
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(3, 155)
+        Me.Label2.Location = New System.Drawing.Point(3, 225)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(88, 16)
         Me.Label2.TabIndex = 25
@@ -105,7 +106,7 @@ Partial Class VendorControl
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(5, 198)
+        Me.Label3.Location = New System.Drawing.Point(9, 261)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(58, 16)
         Me.Label3.TabIndex = 26
@@ -114,7 +115,7 @@ Partial Class VendorControl
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(5, 238)
+        Me.Label4.Location = New System.Drawing.Point(15, 310)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(41, 16)
         Me.Label4.TabIndex = 27
@@ -123,7 +124,7 @@ Partial Class VendorControl
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(5, 275)
+        Me.Label5.Location = New System.Drawing.Point(15, 357)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(46, 16)
         Me.Label5.TabIndex = 28
@@ -131,7 +132,7 @@ Partial Class VendorControl
         '
         'btnSave
         '
-        Me.btnSave.Location = New System.Drawing.Point(101, 312)
+        Me.btnSave.Location = New System.Drawing.Point(115, 398)
         Me.btnSave.Name = "btnSave"
         Me.btnSave.Size = New System.Drawing.Size(75, 23)
         Me.btnSave.TabIndex = 29
@@ -140,7 +141,7 @@ Partial Class VendorControl
         '
         'btnUpdate
         '
-        Me.btnUpdate.Location = New System.Drawing.Point(199, 312)
+        Me.btnUpdate.Location = New System.Drawing.Point(214, 398)
         Me.btnUpdate.Name = "btnUpdate"
         Me.btnUpdate.Size = New System.Drawing.Size(75, 23)
         Me.btnUpdate.TabIndex = 30
@@ -149,7 +150,7 @@ Partial Class VendorControl
         '
         'btnDelete
         '
-        Me.btnDelete.Location = New System.Drawing.Point(295, 312)
+        Me.btnDelete.Location = New System.Drawing.Point(312, 398)
         Me.btnDelete.Name = "btnDelete"
         Me.btnDelete.Size = New System.Drawing.Size(75, 23)
         Me.btnDelete.TabIndex = 31
@@ -158,7 +159,7 @@ Partial Class VendorControl
         '
         'btnNew
         '
-        Me.btnNew.Location = New System.Drawing.Point(4, 312)
+        Me.btnNew.Location = New System.Drawing.Point(18, 398)
         Me.btnNew.Name = "btnNew"
         Me.btnNew.Size = New System.Drawing.Size(75, 23)
         Me.btnNew.TabIndex = 32
@@ -167,7 +168,7 @@ Partial Class VendorControl
         '
         'txtPhone
         '
-        Me.txtPhone.Location = New System.Drawing.Point(101, 272)
+        Me.txtPhone.Location = New System.Drawing.Point(101, 351)
         Me.txtPhone.Name = "txtPhone"
         Me.txtPhone.Size = New System.Drawing.Size(164, 22)
         Me.txtPhone.TabIndex = 23
@@ -175,7 +176,7 @@ Partial Class VendorControl
         'txtSearch
         '
         Me.txtSearch.AccessibleName = ""
-        Me.txtSearch.Location = New System.Drawing.Point(85, 371)
+        Me.txtSearch.Location = New System.Drawing.Point(101, 451)
         Me.txtSearch.Name = "txtSearch"
         Me.txtSearch.Size = New System.Drawing.Size(124, 22)
         Me.txtSearch.TabIndex = 33
@@ -185,14 +186,14 @@ Partial Class VendorControl
         Me.cmbSearchBy.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cmbSearchBy.FormattingEnabled = True
         Me.cmbSearchBy.Items.AddRange(New Object() {"VendorName", "Email", "PhoneNumber"})
-        Me.cmbSearchBy.Location = New System.Drawing.Point(249, 371)
+        Me.cmbSearchBy.Location = New System.Drawing.Point(249, 451)
         Me.cmbSearchBy.Name = "cmbSearchBy"
         Me.cmbSearchBy.Size = New System.Drawing.Size(121, 24)
         Me.cmbSearchBy.TabIndex = 34
         '
         'btnClearSearch
         '
-        Me.btnClearSearch.Location = New System.Drawing.Point(517, 372)
+        Me.btnClearSearch.Location = New System.Drawing.Point(493, 454)
         Me.btnClearSearch.Name = "btnClearSearch"
         Me.btnClearSearch.Size = New System.Drawing.Size(75, 23)
         Me.btnClearSearch.TabIndex = 35
@@ -201,7 +202,7 @@ Partial Class VendorControl
         '
         'btnSearch
         '
-        Me.btnSearch.Location = New System.Drawing.Point(408, 371)
+        Me.btnSearch.Location = New System.Drawing.Point(396, 454)
         Me.btnSearch.Name = "btnSearch"
         Me.btnSearch.Size = New System.Drawing.Size(75, 23)
         Me.btnSearch.TabIndex = 36
@@ -211,16 +212,27 @@ Partial Class VendorControl
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(3, 371)
+        Me.Label6.Location = New System.Drawing.Point(15, 454)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(76, 16)
         Me.Label6.TabIndex = 37
         Me.Label6.Text = "Search For:"
         '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.Location = New System.Drawing.Point(54, 114)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(171, 29)
+        Me.Label7.TabIndex = 38
+        Me.Label7.Text = "Vendor Details"
+        '
         'VendorControl
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.btnSearch)
         Me.Controls.Add(Me.btnClearSearch)
@@ -242,7 +254,7 @@ Partial Class VendorControl
         Me.Controls.Add(Me.txtId)
         Me.Controls.Add(Me.GridView1)
         Me.Name = "VendorControl"
-        Me.Size = New System.Drawing.Size(1009, 659)
+        Me.Size = New System.Drawing.Size(1064, 753)
         CType(Me.GridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -269,4 +281,5 @@ Partial Class VendorControl
     Friend WithEvents btnClearSearch As Button
     Friend WithEvents btnSearch As Button
     Friend WithEvents Label6 As Label
+    Friend WithEvents Label7 As Label
 End Class

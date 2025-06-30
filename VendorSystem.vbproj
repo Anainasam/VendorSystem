@@ -110,6 +110,7 @@
     <Compile Include="PurchaseReportControl.vb">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="SessionInfo.vb" />
     <Compile Include="StockTransferControl.Designer.vb">
       <DependentUpon>StockTransferControl.vb</DependentUpon>
     </Compile>

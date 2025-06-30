@@ -14,7 +14,19 @@ Public Class PurchaseReportControl
         Try
             Dim dt As New DataTable()
             cnn.Open()
-            Dim cmd As New SqlCommand("SELECT * FROM Setup.Purchase", cnn) ' <-- corrected table
+
+            Dim query As String
+            Dim cmd As SqlCommand
+
+            If SessionInfo.IsAdmin Then
+                query = "SELECT * FROM Setup.Purchase"
+                cmd = New SqlCommand(query, cnn)
+            Else
+                query = "SELECT * FROM Setup.Purchase WHERE Username = @Username"
+                cmd = New SqlCommand(query, cnn)
+                cmd.Parameters.AddWithValue("@Username", SessionInfo.LoggedInUsername)
+            End If
+
             Dim reader As SqlDataReader = cmd.ExecuteReader()
             dt.Load(reader)
             cnn.Close()

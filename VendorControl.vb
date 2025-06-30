@@ -8,18 +8,28 @@ Public Class VendorControl
     Private Sub VendorControl_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         GetID()
         GridView1.DataSource = GetData()
-        ' 🔧 Initialize search ComboBox
         cmbSearchBy.Items.Clear()
         cmbSearchBy.Items.AddRange(New String() {"VendorName", "Email", "PhoneNumber"})
         cmbSearchBy.SelectedIndex = 0
-
     End Sub
 
     Private Function GetData() As DataTable
         Try
             Dim dt As New DataTable()
             cnn.Open()
-            Dim cmd As New SqlCommand("SELECT * FROM Setup.Vendor", cnn)
+
+            Dim query As String
+            If SessionInfo.IsAdmin Then
+                query = "SELECT * FROM Setup.Vendor"
+            Else
+                query = "SELECT * FROM Setup.Vendor WHERE Username = @user"
+            End If
+
+            Dim cmd As New SqlCommand(query, cnn)
+            If Not SessionInfo.IsAdmin Then
+                cmd.Parameters.AddWithValue("@user", SessionInfo.LoggedInUsername)
+            End If
+
             Dim reader As SqlDataReader = cmd.ExecuteReader()
             dt.Load(reader)
             cnn.Close()
@@ -50,13 +60,14 @@ Public Class VendorControl
         End If
 
         Try
-            Dim cmd As New SqlCommand("INSERT INTO Setup.Vendor (ID, VendorName, Address, Email, PhoneNumber) 
-                                       VALUES (@ID, @Name, @Address, @Email, @Phone)", cnn)
+            Dim cmd As New SqlCommand("INSERT INTO Setup.Vendor (ID, VendorName, Address, Email, PhoneNumber, Username) 
+                                       VALUES (@ID, @Name, @Address, @Email, @Phone, @Username)", cnn)
             cmd.Parameters.AddWithValue("@ID", txtId.Text)
             cmd.Parameters.AddWithValue("@Name", txtName.Text)
             cmd.Parameters.AddWithValue("@Address", txtAddress.Text)
             cmd.Parameters.AddWithValue("@Email", txtEmail.Text)
             cmd.Parameters.AddWithValue("@Phone", txtPhone.Text)
+            cmd.Parameters.AddWithValue("@Username", SessionInfo.LoggedInUsername)
 
             cnn.Open()
             cmd.ExecuteNonQuery()
@@ -74,12 +85,14 @@ Public Class VendorControl
 
     Private Sub btnUpdate_Click(sender As Object, e As EventArgs) Handles btnUpdate.Click
         Try
-            Dim cmd As New SqlCommand("UPDATE Setup.Vendor SET VendorName=@Name, Address=@Address, Email=@Email, PhoneNumber=@Phone WHERE ID=@ID", cnn)
+            Dim cmd As New SqlCommand("UPDATE Setup.Vendor SET VendorName=@Name, Address=@Address, Email=@Email, PhoneNumber=@Phone 
+                                       WHERE ID=@ID AND Username=@Username", cnn)
             cmd.Parameters.AddWithValue("@ID", txtId.Text)
             cmd.Parameters.AddWithValue("@Name", txtName.Text)
             cmd.Parameters.AddWithValue("@Address", txtAddress.Text)
             cmd.Parameters.AddWithValue("@Email", txtEmail.Text)
             cmd.Parameters.AddWithValue("@Phone", txtPhone.Text)
+            cmd.Parameters.AddWithValue("@Username", SessionInfo.LoggedInUsername)
 
             cnn.Open()
             cmd.ExecuteNonQuery()
@@ -102,8 +115,9 @@ Public Class VendorControl
         End If
 
         Try
-            Dim cmd As New SqlCommand("DELETE FROM Setup.Vendor WHERE ID=@ID", cnn)
+            Dim cmd As New SqlCommand("DELETE FROM Setup.Vendor WHERE ID=@ID AND Username=@Username", cnn)
             cmd.Parameters.AddWithValue("@ID", txtId.Text)
+            cmd.Parameters.AddWithValue("@Username", SessionInfo.LoggedInUsername)
 
             cnn.Open()
             cmd.ExecuteNonQuery()
@@ -132,6 +146,10 @@ Public Class VendorControl
         txtPhone.Clear()
     End Sub
 
+    Private Sub btnSearch_Click(sender As Object, e As EventArgs) Handles btnSearch.Click
+        SearchVendors()
+    End Sub
+
     Private Sub SearchVendors()
         Try
             Dim searchField As String = cmbSearchBy.SelectedItem?.ToString()
@@ -144,9 +162,19 @@ Public Class VendorControl
 
             Dim dt As New DataTable()
             cnn.Open()
-            Dim query As String = $"SELECT * FROM Setup.Vendor WHERE {searchField} LIKE @value"
+            Dim query As String
+
+            If SessionInfo.IsAdmin Then
+                query = $"SELECT * FROM Setup.Vendor WHERE {searchField} LIKE @value"
+            Else
+                query = $"SELECT * FROM Setup.Vendor WHERE {searchField} LIKE @value AND Username = @Username"
+            End If
+
             Dim cmd As New SqlCommand(query, cnn)
             cmd.Parameters.AddWithValue("@value", "%" & searchValue & "%")
+            If Not SessionInfo.IsAdmin Then
+                cmd.Parameters.AddWithValue("@Username", SessionInfo.LoggedInUsername)
+            End If
 
             Dim reader As SqlDataReader = cmd.ExecuteReader()
             dt.Load(reader)
@@ -158,16 +186,10 @@ Public Class VendorControl
             cnn.Close()
         End Try
     End Sub
-    ' 🔍 Search Button Click
-    Private Sub btnSearch_Click(sender As Object, e As EventArgs) Handles btnSearch.Click
-        SearchVendors()
-    End Sub
 
-    ' ❌ Clear Search Button Click
     Private Sub btnClearSearch_Click(sender As Object, e As EventArgs) Handles btnClearSearch.Click
         txtSearch.Clear()
         If cmbSearchBy.Items.Count > 0 Then cmbSearchBy.SelectedIndex = 0
-        GridView1.DataSource = GetData() ' Reload full data
+        GridView1.DataSource = GetData()
     End Sub
-
 End Class

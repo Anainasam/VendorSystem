@@ -10,12 +10,23 @@ Public Class CustomerControl
         GridView1.DataSource = GetData()
     End Sub
 
-    ' 🔍 Load all customers into grid
     Private Function GetData() As DataTable
         Try
             Dim dt As New DataTable()
             cnn.Open()
-            Dim cmd As New SqlCommand("SELECT * FROM Setup.Customer", cnn)
+
+            Dim query As String
+            If SessionInfo.IsAdmin Then
+                query = "SELECT * FROM Setup.Customer"
+            Else
+                query = "SELECT * FROM Setup.Customer WHERE Username = @User"
+            End If
+
+            Dim cmd As New SqlCommand(query, cnn)
+            If Not SessionInfo.IsAdmin Then
+                cmd.Parameters.AddWithValue("@User", SessionInfo.LoggedInUsername)
+            End If
+
             Dim reader As SqlDataReader = cmd.ExecuteReader()
             dt.Load(reader)
             cnn.Close()
@@ -27,7 +38,6 @@ Public Class CustomerControl
         End Try
     End Function
 
-    ' 🆔 Auto-generate Customer ID
     Private Sub GetID()
         Try
             cnn.Open()
@@ -40,7 +50,6 @@ Public Class CustomerControl
         End Try
     End Sub
 
-    ' 💾 Save new customer
     Private Sub btnSave_Click(sender As Object, e As EventArgs) Handles btnSave.Click
         If txtId.Text = "" Or txtName.Text = "" Then
             MsgBox("Please enter Customer ID and Name.")
@@ -48,13 +57,14 @@ Public Class CustomerControl
         End If
 
         Try
-            Dim cmd As New SqlCommand("INSERT INTO Setup.Customer (ID, CustomerName, Address, Email, PhoneNumber)
-                                       VALUES (@ID, @Name, @Address, @Email, @Phone)", cnn)
+            Dim cmd As New SqlCommand("INSERT INTO Setup.Customer (ID, CustomerName, Address, Email, PhoneNumber, Username) 
+                                       VALUES (@ID, @Name, @Address, @Email, @Phone, @User)", cnn)
             cmd.Parameters.AddWithValue("@ID", txtId.Text)
             cmd.Parameters.AddWithValue("@Name", txtName.Text)
             cmd.Parameters.AddWithValue("@Address", txtAddress.Text)
             cmd.Parameters.AddWithValue("@Email", txtEmail.Text)
             cmd.Parameters.AddWithValue("@Phone", txtPhone.Text)
+            cmd.Parameters.AddWithValue("@User", SessionInfo.LoggedInUsername)
 
             cnn.Open()
             cmd.ExecuteNonQuery()
@@ -70,16 +80,16 @@ Public Class CustomerControl
         End Try
     End Sub
 
-    ' ✏️ Update existing customer
     Private Sub btnUpdate_Click(sender As Object, e As EventArgs) Handles btnUpdate.Click
         Try
-            Dim cmd As New SqlCommand("UPDATE Setup.Customer SET CustomerName=@Name, Address=@Address, Email=@Email, PhoneNumber=@Phone
-                                       WHERE ID=@ID", cnn)
+            Dim cmd As New SqlCommand("UPDATE Setup.Customer SET CustomerName=@Name, Address=@Address, Email=@Email, PhoneNumber=@Phone 
+                                       WHERE ID=@ID AND Username=@User", cnn)
             cmd.Parameters.AddWithValue("@ID", txtId.Text)
             cmd.Parameters.AddWithValue("@Name", txtName.Text)
             cmd.Parameters.AddWithValue("@Address", txtAddress.Text)
             cmd.Parameters.AddWithValue("@Email", txtEmail.Text)
             cmd.Parameters.AddWithValue("@Phone", txtPhone.Text)
+            cmd.Parameters.AddWithValue("@User", SessionInfo.LoggedInUsername)
 
             cnn.Open()
             cmd.ExecuteNonQuery()
@@ -95,7 +105,6 @@ Public Class CustomerControl
         End Try
     End Sub
 
-    ' ❌ Delete customer
     Private Sub btnDelete_Click(sender As Object, e As EventArgs) Handles btnDelete.Click
         If txtId.Text = "" Then
             MsgBox("Please enter a valid ID to delete.")
@@ -103,8 +112,9 @@ Public Class CustomerControl
         End If
 
         Try
-            Dim cmd As New SqlCommand("DELETE FROM Setup.Customer WHERE ID=@ID", cnn)
+            Dim cmd As New SqlCommand("DELETE FROM Setup.Customer WHERE ID=@ID AND Username=@User", cnn)
             cmd.Parameters.AddWithValue("@ID", txtId.Text)
+            cmd.Parameters.AddWithValue("@User", SessionInfo.LoggedInUsername)
 
             cnn.Open()
             cmd.ExecuteNonQuery()
@@ -120,7 +130,6 @@ Public Class CustomerControl
         End Try
     End Sub
 
-    ' 🆕 Clear fields
     Private Sub btnNew_Click(sender As Object, e As EventArgs) Handles btnNew.Click
         ClearFields()
         GetID()
